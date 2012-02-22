@@ -1,0 +1,83 @@
+\documentclass[pdftex,12pt,a4paper,english]{article}
+\pdfoutput=1 %must be within the first 5 lines according to arXiv
+
+%% character encodings, fonts, language, etc.
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[utf8]{inputenc}
+\usepackage{babel}
+
+%% typical math resources
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+
+%% for handling multiple authors
+\usepackage{authblk}
+
+%% for nice units and fractions
+\usepackage{units}
+
+%% for creating hyperlinks in cross-references
+\usepackage{hyperref}
+
+%% for paragraphs without indentations
+\usepackage{parskip}
+
+%% smaller margins (add [cm] option for even smaller)
+\usepackage{fullpage}
+
+%% for, well, fancy headers
+\usepackage{fancyhdr}
+
+%% pdf looks better with microtype
+\usepackage[kerning,spacing]{microtype}
+\microtypecontext{spacing=nonfrench}
+
+%% enable graphics
+\usepackage{graphics}
+\usepackage[pdftex]{graphicx}
+
+%% for colored text and backgrounds
+%\usepackage{color}
+
+\ifpdf
+    %% insert license.xmp into the final document
+    \usepackage{xmpincl}
+    \includexmp{license}
+
+    %% for \pdfdate
+    \usepackage{datetime}
+    
+    \pdfinfo{
+        /Author         (Enzymatic Synthesis Group)
+        /Title          (Enzymatic DNA Synthesis Roadmap)
+        /CreationDate   (D:\pdfdate) %20120221120000
+        /ModDate        (D:\pdfdate)
+        /Subject        (enzymatic dna synthesis)
+        /Keywords       (enzymatic dna synthesis, dna synthesis, dna, polymerase, dna polymerase, protein design, enzyme design, oligonucleotide synthesis)
+    }
+\fi %pdf
+
+%% just some metadata for \maketitle if it should be used later
+%% consider using http://www-spires.fnal.gov/spires/hepnames/authors_xml/
+\title{Enzymatic DNA Synthesis Roadmap}
+\author{Enzymatic Synthesis Group}
+\date{\today}
+
+%% for use with authblk
+\author[1]{bryan a. bishop}
+\author[2]{george church}
+\author[2]{j. craig venter}
+
+\affil[1]{institute for minimal institutionalization}
+\affil[2]{institute for advanced institutionalization}
+
+\begin{document}
+    \input{tex/title.tex}
+    \input{tex/copyright.tex}
+    \input{tex/table-of-contents.tex}
+
+    %\input{tex/overview.tex}
+    %\input{tex/bibliography.tex}
+\end{document}

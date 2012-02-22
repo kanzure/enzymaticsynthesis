@@ -1,0 +1,13 @@
+#ignore latex junk
+*.out
+*.aux
+*.toc
+*.log
+*.xmpi
+
+#ignore generated pdf files
+*.pdf
+
+#ignore swap files
+.*.swp
+.*.swo
